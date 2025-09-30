@@ -6,7 +6,7 @@ workerpool 的实现主要分为三个部分：
 - pool 中 worker（Goroutine）的管理。
 - task 的提交与调度。
 工作流程如下图所示，
-![alt text](image.png)
+![alt text](image/%E6%9E%B6%E6%9E%84%E5%9B%BE.png)
 - capacity 是 pool 的一个属性，代表整个 pool 中 worker 的最大容量。
 - active channel：是一个带缓冲的 channel，作为 worker 的“计数器”。
 	- 当 active channeql 可写时，我们就创建一个 worker，用于处理用户通过 Schedule 函数提交的待处理的请求。
